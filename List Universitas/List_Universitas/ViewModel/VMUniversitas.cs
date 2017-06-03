@@ -1,0 +1,37 @@
+﻿using List_Universitas.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Xamarin.Forms;
+
+namespace List_Universitas.ViewModel
+{
+    public class VMUniversitas: BindableObject
+    {
+        private List<ModelUniversitas> listUniversitas;
+        public List<ModelUniversitas> ListUniversitas
+        {
+            get { return listUniversitas; }
+            set
+            {
+                listUniversitas = value;
+                OnPropertyChanged("ListItems");
+            }
+        }
+        public VMUniversitas()
+        {
+            listUniversitas = new List<ModelUniversitas>
+            {
+                new ModelUniversitas {Gambar="ITB.png",NamaUniversitas="ITB",Description="Institut Teknologi Bandung",Detail="Institut Teknologi Bandung (ITB) adalah sebuah perguruan tinggi negeri yang berkedudukan di Kota Bandung. Nama ITB diresmikan pada tanggal 2 Maret 1959. Sejak tanggal 14 Oktober 2013 ITB menjadi Perguruan Tinggi Negeri Badan Hukum (PTN BH) yang memiliki otonomi pengelolaan dalam akademik dan non-akademik. ITB telah memiliki 20 program studi yang terakreditasi secara internasional (sembilan di antaranya dari ABET) . Sejarah ITB bermula sejak awal abad ke-20, atas prakarsa masyarakat penguasa kala itu. Tujuan awal pendiriannya adalah untuk memenuhi kebutuhan tenaga teknik yang menjadi sulit karena terganggunya hubungan antara negeri Belanda dan wilayah jajahannya di kawasan Nusantara, sebagai akibat pecahnya Perang Dunia Pertama."},
+                new ModelUniversitas {Gambar="UNPAD.png",NamaUniversitas="UNPAD",Description="Universitas Padjadjaran",Detail="Universitas Padjadjaran (disingkat Unpad) adalah sebuah perguruan tinggi negeri di Bandung, Jawa Barat, Indonesia. \n Pada 20 Oktober 2014, Universitas ini berubah status menjadi Perguruan Tinggi Negeri Badan Hukum (PTN BH) dari Badan Layanan Umum (BLU). Peresmian itu ditandai dengan peraturan pemerintah (PP) yang ditandatangani mantan Presiden Susilo Bambang Yudhoyono. Penetapan itu didasarkan atas evaluasi kinerja yang dilakukan tim independen yang dibentuk Kementerian Pendidikan dan Kebudayan (Kemendikbud)[2]. Selain itu berdasarkan Keputusan Badan Akreditasi Nasional Perguruan Tinggi (BAN PT) yang ditetapkan pada 16 Januari 2014, Unpad mendapat peringkat A (sangat baik)."},
+                new ModelUniversitas {Gambar="UPI.jpg",NamaUniversitas="UPI",Description="Universitas Pendidikan Indonesia",Detail="Universitas Pendidikan Indonesia (UPI) merupakan salah satu Perguruan Tinggi Negeri yang ada di Kota Bandung. \n   UPI juga termasuk sebagai salah satu kampus unggulan di Indonesia. Universitas Pendidikan Indonesia didirikan pada 20 Oktober 1954 yang mana sebelumnya bernama IKIP Bandung. \n Universitas Pendidikan Indonesia menawarkan 8 jenis Fakultas yaitu Fakultas Ilmu Pendidikan (FIP), Fakultas Pendidikan Bahasa dan Sastra (FPBS), Fakultas Pendidikan Matematika dan Ilmu Pengetahuan Alam (FPMIPA), Fakultas Pendidikan Ilmu Pengetahuan Sosial (FPIPS), Fakultas Pendidikan Olahraga dan Kesehatan (FPOK), Fakultas Pendidikan Teknologi dan Kejuruan (FPTK), Fakultas Pendidikan Seni dan Desain (FPSD) dan  Fakultas Pendidikan Ekonomi dan Bisnis (FPEB). Dengan banyaknya pilihan Fakultas yang ditawarkan, tidak heran jika banyak orang yang ingin melanjutkan pendidikan di Universitas yang berjuluk Kampus Bumi Siliwangi"},
+                new ModelUniversitas {Gambar="unikom.png",NamaUniversitas="UNIKOM",Description="Universitas Komputer Indonesia",Detail="Universitas Komputer Indonesia (disingkat UNIKOM) adalah sebuah perguruan tinggi swasta yang berada di kota Bandung, Jawa Barat, tepatnya berlokasi di Jl.Dipatiukur No 112-114. Rektornya saat ini dijabat oleh Dr. Ir.Eddy Soeryanto Soegoto. Awalnya dimulai pada bulan Juli tahun 1994 ketika didirikan Lembaga Pendidikan Komputer Indonesia Jerman, disingkat LPKIG, bertempat di jalan Dipati Ukur 102 Bandung . Dengan 1 ruang kelas berkapasitas 50 orang dan 1 laboratorium computer dengan 25 unit komputer, Lembaga ini membuka program pendidikan 1 tahun dengan 5 program studi yaitu Ahli Komputer Aplikasi Bisnis, Ahli Komputer Keuangan & Perbankan, Ahli Komputer Akuntansi & Perpajakan, Ahli Komputer Manajemen & Pemasaran dan Sekretaris Eksekutif. Jumlah peserta pendidikan pada tahun pertama ini sebanyak 233 siswa."},
+                new ModelUniversitas {Gambar="Telkom_University.jpg",NamaUniversitas="TU",Description="Telkom University",Detail="Telkom University berdiri pada tanggal 14 Agustus 2013 berdasarkan Surat Keputusan Direktur Jenderal Pendidikan Tinggi Kemendikbud Nomor 309/E/0/2013. Universitas Telkom adalah Perguruan Tinggi Swasta yang diselenggarakan oleh Yayasan Pendidikan Telkom, merupakan penggabungan dari empat Perguruan Tinggi Swasta, yaitu Institut Teknologi Telkom (IT Telkom), Institut Manajemen Telkom (IM Telkom), Politeknik Telkom, dan Sekolah Tinggi Seni Rupa dan Desain Indonesia Telkom (STISI Telkom). Institut Teknologi Telkom sebelumnya adalah Sekolah Tinggi Teknologi Telkom (STT Telkom). Institut Manajemen Telkom sebelumnya adalah Sekolah Tinggi Manajemen dan Bisnis Telkom (STMB Telkom). STT Telkom dan STMB Telkom didirikan pada tahun 1990 atas prakarsa PT. Telkom yang saat itu dipimpin oleh Direktur Utama Ir. Cacuk Sudarijanto. Kedua sekolah tinggi tersebut merupakan perguruan tinggi pertama di Indonesia yang memiliki kekhususan pendidikan dalam bidang industri pertelekomunikasian serta teknologi informasi."},
+                new ModelUniversitas {Gambar="uinbandung.jpg",NamaUniversitas="UIN",Description="Universitas Islam Negeri Sunan Gunung Djati",Detail="Sejarah berdirinya Universitas Islam Negeri (UIN) Sunan Gunung Djati Bandung tidak lepas dari IAIN Sunan Gunung Djati Bandung karena UIN merupakan kelanjutan dan pengembangan dari IAIN SGD Bandung. IAIN SGD Bandung didirikan pada tanggal 8 April 1968 M bertepatan dengan 10 Muharram 1388 H berdasarkan Keputusan Menteri Agama RI Nomor 56 Tahun 1968. Kehadiran IAIN Sunan Gunung Djati Bandung merupakan hasil perjuangan para tokoh umat Islam Jawa Barat. Dimulai pada tahun 1967, sejumlah tokoh masyarakat, alim ulama, dan cendekiawan Muslim Jawa Barat yang diprakarsai oleh K. H. Anwar Musaddad, K.H. A. Muiz, K.H. R. Sudja'i, dan Arthata dengan persetujuan KDH Jawa Barat, mereka membentuk Panitia Perizinan Pendirian IAIN di Jawa Barat. Panitia tersebut kemudian disahkan oleh Menteri Agama RI dengan SK-MA No. 128 Tahun 1967."},
+                new ModelUniversitas {Gambar="unpas.png",NamaUniversitas="UNPAS",Description="Universitas Pasundan",Detail="Universitas Pasundan Bandung (UNPAS) berdiri sejak tanggal 14 November 1960. UNPAS telah tumbuh dan berkembang menjadi sebuah Universitas terkemuka dan menjadi kebanggaan masyarakat, terbukti dari jumlah mahasiswa yang saat ini terbesar dilingkungan Kopertis Wilayah IV. Mahasiswa UNPAS bukan saja berasal dari 33 Provinsi yang ada di Indonesia tetapi juga dari mahasiswa asing negara-negara sahabat, seperti Thailand, Singapura, Somalia, Hunggaria, Polandia, Taiwan, Turki, Korea Selatan, Malaysia, Kanada, Timor Leste, Uzbekistan, Jerman, Jepang, China, Tajikstan, Estonia, Yunani, Spanyol, Lithuania, Australia dan Kirgistan. Sampai saat ini Universitas Pasundan memiliki 7 Fakultas, 25 Program Studi S1, 7 Program Studi Pascasarjana (S2) dan 3 Program Doktor (S3)."}
+            };
+        }
+    }
+}
